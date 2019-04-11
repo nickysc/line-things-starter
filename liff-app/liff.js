@@ -167,24 +167,27 @@ function liffRequestDevice() {
     liff.bluetooth.requestDevice().then(device => {
         liffConnectToDevice(device);
     }).catch(error => {
+    	alert("not find device");
         uiStatusError(makeErrorMsg(error), false);
     });
 }
 
 function liffConnectToDevice(device) {
     device.gatt.connect().then(() => {
+    	alert("find device");
         document.getElementById("device-name").innerText = device.name;
         document.getElementById("device-id").innerText = device.id;
 
         // Show status connected
         uiToggleDeviceConnected(true);
-
+		alert("USER_SERVICE_UUID");
         // Get service
         device.gatt.getPrimaryService(USER_SERVICE_UUID).then(service => {
             liffGetUserService(service);
         }).catch(error => {
             uiStatusError(makeErrorMsg(error), false);
         });
+        alert("PSDI_SERVICE_UUID");
         device.gatt.getPrimaryService(PSDI_SERVICE_UUID).then(service => {
             liffGetPSDIService(service);
         }).catch(error => {
