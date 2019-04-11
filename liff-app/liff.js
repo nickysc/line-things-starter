@@ -23,8 +23,7 @@ let clickCount = 0;
 // };
 
 window.onload =function(){
-	    // initializeApp();
-	alert("asdfdf");
+	initializeApp();
 }
 
 // ----------------- //
