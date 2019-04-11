@@ -18,7 +18,7 @@ let clickCount = 0;
 
 window.onload = () => {
     uiToggleDeviceConnected(true);
-
+    alert("aaa");
    // initializeApp();
 };
 
