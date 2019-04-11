@@ -16,16 +16,16 @@ let clickCount = 0;
 // On window load //
 // -------------- //
 
-// window.onload = () => {
-//     uiToggleDeviceConnected(true);
+window.onload = () => {
+   //  uiToggleDeviceConnected(true);
 //     alert("aaa");
-//    // initializeApp();
-// };
+   initializeApp();
+};
 
-window.onload =function(){
-	uiToggleDeviceConnected(true);
-	alert("aaa");
-}
+// window.onload =function(){
+// 	uiToggleDeviceConnected(true);
+// 	alert("aaa");
+// }
 
 // ----------------- //
 // Handler functions //
