@@ -17,7 +17,9 @@ let clickCount = 0;
 // -------------- //
 
 window.onload = () => {
-    initializeApp();
+    uiToggleDeviceConnected(true);
+
+   // initializeApp();
 };
 
 // ----------------- //
