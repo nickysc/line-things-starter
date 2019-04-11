@@ -151,13 +151,13 @@ function initializeLiff() {
 function liffCheckAvailablityAndDo(callbackIfAvailable) {
     // Check Bluetooth availability
     liff.bluetooth.getAvailability().then(isAvailable => {
-        if (isAvailable) {
+        // if (isAvailable) {
             uiToggleDeviceConnected(false);
             callbackIfAvailable();
-        } else {
-            uiStatusError("Bluetooth not available", true);
-            setTimeout(() => liffCheckAvailablityAndDo(callbackIfAvailable), 10000);
-        }
+        // } else {
+//             uiStatusError("Bluetooth not available", true);
+//             setTimeout(() => liffCheckAvailablityAndDo(callbackIfAvailable), 10000);
+//         }
     }).catch(error => {
         uiStatusError(makeErrorMsg(error), false);
     });;
