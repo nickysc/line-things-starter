@@ -86,7 +86,7 @@ function uiToggleDeviceConnected(connected) {
         // Show status disconnected
         elStatus.classList.remove("success");
         elStatus.classList.add("inactive");
-        elStatus.innerText = "Device disconnected";
+        elStatus.innerText = "Device disconnected 1111";
         // Hide controls
         elControls.classList.add("hidden");
     }
@@ -133,6 +133,8 @@ function initializeApp() {
 }
 
 function initializeLiff() {
+	const elStatus = document.getElementById("status");
+    elStatus.innerText = "aaaaa";
     liff.initPlugins(['bluetooth']).then(() => {
         liffCheckAvailablityAndDo(() => liffRequestDevice());
     }).catch(error => {
